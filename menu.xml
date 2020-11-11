@@ -2,6 +2,20 @@
     <menuitem label='_t{Administration}'>
         <icon>fas:home fa-fw</icon>
         <menu>
+            <menuitem label='ReactJS Apps'>
+                <icon>fas:home fa-fw</icon>
+                <menu>
+                    <menuitem label='React App 1'>
+                        <icon>fas:tachometer-alt fa-fw</icon>
+                        <action>ReactApp1</action>
+                    </menuitem>
+                    <menuitem label='React App 2'>
+                        <icon>fas:tachometer-alt fa-fw</icon>
+                        <action>ReactApp2</action>
+                    </menuitem>
+                </menu>
+            </menuitem>
+            
               <menuitem label='Dashboard'>
                   <icon>fas:tachometer-alt fa-fw</icon>
                   <action>SystemAdministrationDashboard</action>
