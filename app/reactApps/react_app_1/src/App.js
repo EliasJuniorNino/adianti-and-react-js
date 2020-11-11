@@ -15,11 +15,18 @@ export default function App() {
             ...todos,
             value
         ]);
+        setValue('');
     }, [todos, value])
 
     const handleFormSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
     }
+
+    const handleInputSubmit = useCallback((e) => {
+        if (e.code.toLowerCase() === 'enter') {
+            handleButtonClick();
+        }
+    }, [handleButtonClick])
 
     return (
         <div>
@@ -28,6 +35,7 @@ export default function App() {
                     <input 
                         value={value} 
                         onChange={handleInputChange} 
+                        onKeyUp={handleInputSubmit}
                         type="text" class="form-control" 
                         placeholder="Digite um texto aqui..." 
                         aria-label="Digite um texto aqui..." 
